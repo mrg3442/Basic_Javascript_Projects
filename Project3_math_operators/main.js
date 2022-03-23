@@ -46,3 +46,8 @@ function decFunction() {
 }
 
 window.alert(Math.random() * 1000);
+
+function roundFunction() {
+    var num = Math.round(8.2);
+    document.getElementById("round").innerHTML = num + " Round to nearest whole number.";
+}
