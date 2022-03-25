@@ -8,7 +8,7 @@ function intentional() {
 
 function ifStat() {
     if(new Date().getHours()  < 4) {
-        document.write("<br> Why are you up so late?");
+        document.getElementById("ran").innerHTML = "<br> Why are you up so late?";
     }
 }
 
