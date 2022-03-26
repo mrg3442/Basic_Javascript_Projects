@@ -4,11 +4,9 @@ function intentional() {
    if(new Date().getHours() > 20 || new Date().getHours() < 5) {
     document.getElementById("pop").innerHTML = "Have a goodnight!";
    }
-}
 
-function ifStat() {
-    if(new Date().getHours()  < 4) {
-        document.getElementById("ran").innerHTML = "<br> Why are you up so late?";
+   if(new Date().getHours()  < 4) {
+    document.getElementById("ran").innerHTML = "<br> Why are you up so late?";
     }
 }
 
