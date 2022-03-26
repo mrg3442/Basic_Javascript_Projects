@@ -34,3 +34,34 @@ function letFunction() {
     }
     document.write(num);
 }
+
+function objFunction() {
+    let house = {
+        stories: "Two stories in height  ",
+        bedrooms: "Three bedrooms ",
+        bathrooms: "One bathroom",
+        pool: " and has a backyard permanent pool.",
+        description : function() {
+            return "the house on miller st has " + this.stories + this.bedrooms + this.bathrooms + this.pool;
+        }
+    };
+    document.getElementById("house").innerHTML = house.description();
+}
+
+function breaker() {
+    for(i = 0; i < 10; i++) {
+        if(i==3){//breaks for loop at 3
+            document.getElementById("break").innerHTML = i;
+            break;
+        }
+    }
+}
+
+function continuer() {
+    let text="";
+    for(i = 0; i < 10; i++) {
+        if(i == 2 || i == 4){continue;}// skips over 2 and 4
+        text+="The number is " + i + "<br>";
+    }
+    document.getElementById("continue").innerHTML = text;
+}
