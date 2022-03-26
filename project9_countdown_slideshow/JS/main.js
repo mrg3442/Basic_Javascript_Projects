@@ -1,7 +1,25 @@
 let slideIndex = 0;
 showSlides();
 
+
 function showSlides() {
+
+  function countdown() {
+    var seconds = 6;
+    
+    function tick() {
+      seconds = seconds -1;
+      timer.innerHTML = seconds;
+      var time = setTimeout(tick, 1000)
+      if (seconds == -1) {
+        clearTimeout(time);
+        timer.innerHTML = "";
+      }
+    }
+    tick();
+  }
+  countdown();
+
   let i;
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");
@@ -17,3 +35,4 @@ function showSlides() {
   dots[slideIndex-1].className += " active";
   setTimeout(showSlides, 6000); // Change image every 6 seconds
 }
+
